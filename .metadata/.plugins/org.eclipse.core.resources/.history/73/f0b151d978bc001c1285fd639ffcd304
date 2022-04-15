@@ -49,7 +49,7 @@ public class GuenthersMarket {
 			}
 		}
 		
-		System.out.printf("%s%-5.2f", "Average price per item in order was $", avgCost());
+		System.out.println("Average price per item in order was $" + avgCost());
 		in.close();
 
 	}

@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/**
+ * A simple console based shopping list application
+ * 
+ * @author Tim Fierek
+ *
+ */
+public class GuenthersMarket {
+	
+	private static Scanner in;
+	private static Map<String, Double> items = new TreeMap<>();
+
+	/**
+	 * 
+	 */
+	public static void main(String[] args) {
+		in = new Scanner(System.in);
+		fillItemsMap();
+		printMenu();
+		
+		
+	}
+
+	private static void fillItemsMap() {
+		items.put("Coffee", 2.75);
+		items.put("Tea", 1.98);
+		items.put("Bread", 2.49);
+		items.put("Water", 0.99);
+		items.put("Lunch Meat", 6.99);
+		items.put("Apples", 0.49);
+		items.put("Lettuce", 1.05);
+		items.put("Candy", 3.00);
+	}
+	
+	/**
+	 * Simple void method to print out the possible purchase options
+	 */
+	public static void printMenu() {
+		System.out.printf("%-16s%-14s%n", "Item", "Price");
+		System.out.println("==============================");
+		
+		for(Map.Entry<String, Double> item : items.entrySet()) {
+			System.out.printf("%-16s%1s%-4.3f%n", item.getKey(), "$", item.getValue());
+		}
+	}
+	
+	//public static double avgCost() {	
+	//}
+	
+	//public static int findMostExpensive() {	
+	//}
+	
+	//public static int findLeastExpensive() {	
+	//}
+}

@@ -32,7 +32,7 @@ public class GuenthersMarket {
 		while (loop) {
 			item = collectChoice();
 			
-			// Print items added to cart and add them to array lists 
+			// Print items added to cart and add them to arraylists 
 			System.out.println("Adding " + item + " to cart at $" + items.get(item));
 			orderNames.add(item);
 			orderPrices.add(items.get(item));
@@ -40,17 +40,6 @@ public class GuenthersMarket {
 			// Figure out if user would like to continue
 			loop = consoleYesOrNo();
 		}
-		
-		System.out.println("Thanks for your order!");
-		if(orderNames.size() != 0) {
-			System.out.println("Here's what you got:");
-			for(int i = 0; i < orderNames.size(); i++) {
-				System.out.printf("%-16s%-1s%-5.2f%n", orderNames.get(i), "$", orderPrices.get(i));
-			}
-		}
-		
-		System.out.printf("%s%-5.2f", "Average price per item in order was $", avgCost());
-		in.close();
 
 	}
 	
@@ -116,21 +105,8 @@ public class GuenthersMarket {
 		}
 	}
 	
-	/**
-	 * Calculates average cost 
-	 * 
-	 * @return average cost per item from cart
-	 */
-	public static double avgCost() {	
-		double avg = 0;
-		
-		for(int i = 0; i < orderPrices.size(); i++) {
-			avg += orderPrices.get(i);
-		}
-		avg /= orderPrices.size();
-		
-		return avg;
-	}
+	//public static double avgCost() {	
+	//}
 	
 	//public static int findMostExpensive() {	
 	//}
