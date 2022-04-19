@@ -58,7 +58,7 @@ public class GuenthersMarket {
 			}
 		}
 		
-		System.out.printf("%s%-5.2f%n", "Average price per item in order was $", avgCost());
+		System.out.printf("%s%-5.2f", "Average price per item in order was $", avgCost());
 		
 		System.out.println("The most expensive item ordered was " + orderNames.get(findMostExpensive()));
 		
@@ -206,7 +206,6 @@ public class GuenthersMarket {
 		for(int i = 0; i < orderPrices.size(); i++) {
 			if(orderPrices.get(i) > highestPrice) {
 				mostExpensive = i;
-				highestPrice = orderPrices.get(i);
 			}
 		}
 		
@@ -224,7 +223,6 @@ public class GuenthersMarket {
 		for(int i = 0; i < orderPrices.size(); i++) {
 			if(orderPrices.get(i) < lowestPrice) {
 				leastExpensive = i;
-				lowestPrice = orderPrices.get(i);
 			}
 		}
 		

@@ -58,11 +58,7 @@ public class GuenthersMarket {
 			}
 		}
 		
-		System.out.printf("%s%-5.2f%n", "Average price per item in order was $", avgCost());
-		
-		System.out.println("The most expensive item ordered was " + orderNames.get(findMostExpensive()));
-		
-		System.out.println("The least expensive item ordered was " + orderNames.get(findLeastExpensive()));
+		System.out.printf("%s%-5.2f", "Average price per item in order was $", avgCost());
 		in.close();
 
 	}
@@ -174,60 +170,16 @@ public class GuenthersMarket {
 		double avg = 0;
 		
 		for(int i = 0; i < orderPrices.size(); i++) {
-			avg += (orderPrices.get(i) * orderQuantity.get(i));
+			avg += orderPrices.get(i);
 		}
-		avg /= getNumItems();
+		avg /= orderPrices.size();
 		
 		return avg;
 	}
 	
-	/**
-	 * finds the number of items orders
-	 * 
-	 * @return the total quantity of every item ordered by the user
-	 */
-	public static int getNumItems() {
-		int num = 0;
-		for(Integer i : orderQuantity) {
-			num += i;
-		}
-		
-		return num;
-	}
+	//public static int findMostExpensive() {	
+	//}
 	
-	/**
-	 * locates the index of the most expensive item ordered.
-	 * 
-	 * @return the index of the most expensive item ordered
-	 */
-	public static int findMostExpensive() {
-		int mostExpensive = -1;
-		double highestPrice = -1.0;
-		for(int i = 0; i < orderPrices.size(); i++) {
-			if(orderPrices.get(i) > highestPrice) {
-				mostExpensive = i;
-				highestPrice = orderPrices.get(i);
-			}
-		}
-		
-		return mostExpensive;
-	}
-	
-	/**
-	 * locates the index of the least expensive item ordered.
-	 * 
-	 * @return the index of the least expensive item ordered
-	 */
-	public static int findLeastExpensive() {
-		int leastExpensive = -1;
-		double lowestPrice = Double.MAX_VALUE;
-		for(int i = 0; i < orderPrices.size(); i++) {
-			if(orderPrices.get(i) < lowestPrice) {
-				leastExpensive = i;
-				lowestPrice = orderPrices.get(i);
-			}
-		}
-		
-		return leastExpensive;
-	}
+	//public static int findLeastExpensive() {	
+	//}
 }
