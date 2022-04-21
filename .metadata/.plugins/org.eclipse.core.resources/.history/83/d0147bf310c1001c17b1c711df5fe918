@@ -102,7 +102,7 @@ public class GuenthersMarket {
 				indexNum = in.nextInt();
 				switch (indexNum) {
 				case 1:
-					item = "tea";
+					item = "apples";
 					break;
 				case 2:
 					item = "bread";
@@ -114,16 +114,16 @@ public class GuenthersMarket {
 					item = "coffee";
 					break;
 				case 5:
-					item = "lunch meat";
+					item = "lettuce";
 					break;
 				case 6:
-					item = "water";
+					item = "lunch meat";
 					break;
 				case 7:
-					item = "apples";
+					item = "tea";
 					break;
 				case 8:
-					item = "lettuce";
+					item = "water";
 					break;
 				default:
 					System.out.print("\nItem not found, please enter a number from the menu: ");

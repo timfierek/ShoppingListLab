@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -14,7 +13,7 @@ import java.util.TreeMap;
 public class GuenthersMarket {
 	
 	private static Scanner in;
-	private static Map<String, Double> items = new HashMap<>();
+	private static Map<String, Double> items = new TreeMap<>();
 	private static List<String> orderNames = new ArrayList<>();
 	private static List<Double> orderPrices = new ArrayList<>();
 	private static List<Integer> orderQuantity = new ArrayList<>();
@@ -102,7 +101,7 @@ public class GuenthersMarket {
 				indexNum = in.nextInt();
 				switch (indexNum) {
 				case 1:
-					item = "tea";
+					item = "apples";
 					break;
 				case 2:
 					item = "bread";
@@ -111,19 +110,19 @@ public class GuenthersMarket {
 					item = "candy";
 					break;
 				case 4:
-					item = "coffee";
+					item = "coffe";
 					break;
 				case 5:
-					item = "lunch meat";
+					item = "lettuce";
 					break;
 				case 6:
-					item = "water";
+					item = "lunch meat";
 					break;
 				case 7:
-					item = "apples";
+					item = "tea";
 					break;
 				case 8:
-					item = "lettuce";
+					item = "water";
 					break;
 				default:
 					System.out.print("\nItem not found, please enter a number from the menu: ");
